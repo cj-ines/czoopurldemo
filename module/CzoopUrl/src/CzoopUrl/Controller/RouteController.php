@@ -36,6 +36,9 @@ class RouteController extends BaseController
 		$url = $this->getUrlRepository();
 		$slug =  $this->params()->fromRoute('slug');
 		$env = $this->params()->fromRoute('environment');
+		if (isnull($slug)) {
+			$this->redirect()->toRoute('czoopurl');
+		}
 		if (!is_null($env)) {
 			$destination = $this->getUrlRepository()->findOneBy(array('slug' => $slug, 'environment' => $env));
 			if (!is_null($destination)) {
