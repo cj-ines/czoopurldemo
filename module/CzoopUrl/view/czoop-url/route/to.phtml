@@ -1,0 +1,14 @@
+<div class="page-heading">
+	<h4><?php echo $platform ?></h4>
+</div>
+<ul class="list-group">
+<?php
+	foreach($destinations as $destination) : ?>
+	<li>
+		<a href="<?php echo $destination->getUrl() ?>">
+			<?php echo $destination->getName(); ?> 
+		</a>
+		<span class="label label-default"><?php echo strtoupper($destination->getEnvironment()); ?></span>
+	</li>
+	<?php endforeach; ?>
+</ul>

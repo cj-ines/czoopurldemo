@@ -1,0 +1,22 @@
+
+<ul class="list-group">
+<?php
+foreach($urls as $url) : ?>
+
+	<li class="list-group-item">
+		<a href="<?php echo $url->getUrl('czoopurl/croute', array('action' => 'go', 'slug' => $url->getSlug())) ?>">
+			<?php echo $url->getName(); ?> 
+		</a>
+		<span class="label label-default"><?php echo strtoupper($url->getEnvironment()); ?></span>
+	</li>
+
+<?php endforeach; ?>
+</ul>
+<?php
+	echo $this->paginationControl(
+		$urls,
+		'sliding',
+		array('czoop-url/route/parts/paginator','UrlRepository'),
+		array('route' => 'czoopurl')
+	);
+?>
