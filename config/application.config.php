@@ -5,7 +5,7 @@ return array(
         'Application',
 		'DoctrineModule',
 		'DoctrineORMModule',
-		'CzoopUrl',
+		//'CzoopUrl',
     ),
 
     // These are various options for the listeners attached to the ModuleManager
