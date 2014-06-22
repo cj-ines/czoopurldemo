@@ -6,6 +6,7 @@ return array(
 		'DoctrineModule',
 		'DoctrineORMModule',
 		'CzoopUrl',
+        'Cuser'
     ),
 
     // These are various options for the listeners attached to the ModuleManager
