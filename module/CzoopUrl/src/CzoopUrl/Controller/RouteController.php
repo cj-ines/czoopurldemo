@@ -31,7 +31,6 @@ class RouteController extends BaseController
 
 	public function toAction()
 	{
-		
 		$em = $this->getEntityManager();
 		$url = $this->getUrlRepository();
 		$slug =  $this->params()->fromRoute('slug');
